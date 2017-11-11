@@ -19,7 +19,6 @@ for (int c = cn; c>=0; c--)
 	listainicial.push_back(rand() % cn+1);
 
 clock_t begin = clock();
-
 int menor = listainicial[0];
 while (listainicial.size() > 0 and not is_sorted(listainicial.begin(), listainicial.end())) {
 	auto indicemenor = min_element(listainicial.begin(), listainicial.end());//coje el menor numero de la lista

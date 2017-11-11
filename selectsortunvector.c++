@@ -17,8 +17,8 @@ prueba de rendimiento*/
 int cn = 100000;
 for (int c = cn; c>=0; c--)
 	lista.push_back(rand() % cn+1);
-clock_t begin = clock();
 
+clock_t begin = clock();
 int nac = 0;//nac = numero a comprobar
 while (not is_sorted(lista.begin(), lista.end())) {
 	auto indicemenor = min_element(lista.begin() + nac, lista.end());//coje el menor numero de la lista
@@ -28,9 +28,8 @@ while (not is_sorted(lista.begin(), lista.end())) {
 }
 clock_t end = clock();
 
-cout << endl;
 for (int elemento : lista)
 	cout << elemento << ' ';
 cout << endl;
-cout << endl <<  double(end - begin) / CLOCKS_PER_SEC;
+cout << "\n" <<  double(end - begin) / CLOCKS_PER_SEC;
 }

@@ -31,7 +31,7 @@ for (int c = cn; c>=0; c--)
 	lista.push_back(rand() % cn+1);
 
 clock_t begin = clock();
-size_t const cuarto = lista.size() / 4;
+const size_t cuarto = lista.size() / 4;
 vector <int> lista1(lista.begin(), lista.begin() + cuarto);
 vector <int> lista2(lista.begin() + cuarto, lista.begin() + cuarto*2);
 vector <int> lista3(lista.begin() + cuarto*2, lista.begin() + cuarto*3);
@@ -57,5 +57,5 @@ clock_t end = clock();
 for (int elemento : lista)
 	cout << elemento << ' ';
 cout << endl;
-cout << endl <<  double(end - begin) / CLOCKS_PER_SEC;
+cout << "\n" <<  double(end - begin) / CLOCKS_PER_SEC;
 }
