@@ -31,5 +31,5 @@ clock_t end = clock();
 for (int elemento : lista)
 	cout << elemento << ' ';
 cout << endl;
-cout << "\n" <<  double(end - begin) / CLOCKS_PER_SEC;
+cout << "\n" <<  double(end - begin) / CLOCKS_PER_SEC << "\n";
 }
