@@ -8,7 +8,7 @@ using namespace std;
 
 vector <int> selectsort(vector <int> lista) {
 	int nac = 0; //nac = numero a comprobar
-	while (not is_sorted(lista.begin(), lista.end())) {
+	while (not is_sorted(lista.begin() + nac-1, lista.end())) {
 		auto indicemenor = min_element(lista.begin() + nac, lista.end()); //coje el menor numero de la lista
 		if (distance(lista.begin(), indicemenor) != nac)
 			iter_swap(lista.begin() + nac, indicemenor); //si no es nac los intercambia
@@ -27,7 +27,7 @@ for (int n = 0; n < cn; n++) {
 }
 prueba de rendimiento*/
 int cn = 100000;
-for (int c = cn; c>=0; c--)
+for (int c = 0; c < cn; c++)
 	lista.push_back(rand() % cn+1);
 
 clock_t begin = clock();

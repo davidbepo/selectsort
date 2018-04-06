@@ -21,9 +21,9 @@ for (int c = 0; c < cn; c++)
 clock_t begin = clock();
 int nac = 0;//nac = numero a comprobar
 while (not is_sorted(lista.begin() + nac-1, lista.end())) {
-	auto indicemenor = min_element(lista.begin() + nac, lista.end());//coje el menor numero de la lista
-	if (distance(lista.begin(), indicemenor) != nac)
-		iter_swap(lista.begin() + nac, indicemenor);//si no es nac los intercambia
+	auto indicemayor = max_element(lista.begin() + nac, lista.end());//coje el mayor numero de la lista
+	if (distance(lista.begin(), indicemayor) != nac)
+		iter_swap(lista.begin() + nac, indicemayor);//si no es nac los intercambia
 	nac++;
 }
 clock_t end = clock();
