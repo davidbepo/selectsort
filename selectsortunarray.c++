@@ -4,8 +4,8 @@
 using namespace std;
 
 bool estaordenada(int lista[], int tamaño, int inicio=0) {
-	for(int i = inicio; i <  tamaño; i++) {
-		if(lista[i] > lista[i+1])
+	for(int i = inicio+1; i <  tamaño; i++) {
+		if(lista[i-1] > lista[i])
 			return false;
 	}
 	return true;
@@ -27,7 +27,7 @@ for (int c = 0; c < cn; c++)
 
 clock_t begin = clock();
 int temp, nac = 0;//nac = numero a comprobar
-while (not estaordenada(lista, cn, nac-1)) {
+while (not estaordenada(lista, cn, nac)) {
 	int indicemenor = nac;
 	int menor = lista[nac];
 	for(int a = indicemenor; a < cn; a++) {
