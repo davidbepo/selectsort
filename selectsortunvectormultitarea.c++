@@ -8,7 +8,7 @@ using namespace std;
 
 vector <int> selectsort(vector <int> lista) {
 	int nac = 0; //nac = numero a comprobar
-	while (not is_sorted(lista.begin() + nac-1, lista.end())) {
+	while (not is_sorted(lista.begin() + nac, lista.end())) {
 		auto indicemenor = min_element(lista.begin() + nac, lista.end()); //coje el menor numero de la lista
 		if (distance(lista.begin(), indicemenor) != nac)
 			iter_swap(lista.begin() + nac, indicemenor); //si no es nac los intercambia
@@ -46,9 +46,9 @@ lista2 = futuro2.get();
 lista3 = futuro3.get();
 lista4 = futuro4.get();
 vector <int> listat1,listat2;
-merge(lista1.begin(), lista1.end(), lista2.begin(), lista2.end(), back_inserter(listat1));
+merge(lista1.begin(), lista1.end(), lista2.begin(), lista2.end(), back_inserter(lista));
 lista1.clear(); lista2.clear();
-merge(lista3.begin(), lista3.end(), lista4.begin(), lista4.end(), back_inserter(listat2));
+merge(lista3.begin(), lista3.end(), lista4.begin(), lista4.end(), back_inserter(lista));
 lista3.clear(); lista4.clear();
 merge(listat1.begin(), listat1.end(), listat2.begin(), listat2.end(), back_inserter(lista));
 listat1.clear(); listat2.clear();

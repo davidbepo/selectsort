@@ -20,7 +20,7 @@ for (int c = 0; c < cn; c++)
 
 clock_t begin = clock();
 int nac = 0;//nac = numero a comprobar
-while (not is_sorted(lista.begin() + nac-1, lista.end())) {
+while (not is_sorted(lista.begin() + nac, lista.end())) {
 	auto indicemayor = max_element(lista.begin() + nac, lista.end());//coje el mayor numero de la lista
 	if (distance(lista.begin(), indicemayor) != nac)
 		iter_swap(lista.begin() + nac, indicemayor);//si no es nac los intercambia
